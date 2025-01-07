@@ -1,5 +1,12 @@
 @import url("https//fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
 
+:root {
+	color-scheme: light dark;
+}
+body {
+	background-color: light-dark(#fff, #212121);
+	color: light-dark(#444, #fff);
+}
 * {
 	margin: 0;
 	padding: 0;
@@ -89,7 +96,7 @@ nav a.active {
 		display: none;
 	}
 
-	.dropdown-menu{
+	.dropdown-menu {
 		display: none;
 		position: absolute;
 		top: 100%;
@@ -153,7 +160,7 @@ nav a.active {
 		display: block;
 		font-size: 2rem;
 		margin: 3rem 1.5rem;
-        transition: 0.4s ease;
+		transition: 0.4s ease;
 	}
 
 	.dropdown-menu a:hover,
@@ -315,6 +322,16 @@ span {
 	}
 }
 
+@media (max-width: 1200px) {
+	.home-content {
+		margin: 70px auto;
+	}
+
+	.typing-text span::after {
+		width: 0;
+	}
+}
+
 @media (max-width: 1000px) {
 	.home {
 		gap: 4rem;
@@ -324,7 +341,11 @@ span {
 @media (max-width: 995px) {
 	.home {
 		flex-direction: column;
-		margin: 5rem 4rem;
+		margin: 5rem 0;
+	}
+
+	.typing-text span::after {
+		width: 0;
 	}
 
 	.home .home-content h3 {
